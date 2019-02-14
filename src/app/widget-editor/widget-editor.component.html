@@ -1,0 +1,33 @@
+<div class="editor">
+    <div class="row">
+        <div class="col-lg-6">
+            <form #widgetForm="ngForm" (ngSubmit)="addWidget(widgetForm)">
+                <div class="form-group" [ngClass]="{'was-validated': title.invalid && (title.dirty || title.touched || submitted)}">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required="" name="title" class="form-control form-control-danger" [(ngModel)]="weatherInfo.title" placeholder="Title of widget" #title="ngModel" />
+                    <div class="invalid-feedback" *ngIf="title.invalid && (title.dirty || title.touched || submitted)">Please enter widget title</div>
+                </div>
+                <div class="form-group">
+                    <div class="title-txt">Temperature</div>
+                    <input type="radio" id="celsius" name="temperature" value="C" [(ngModel)]="weatherInfo.temperature">
+                    <label for="celsius">°C</label>
+                    <input type="radio" id="fahrenheit" name="temperature" value="F" [(ngModel)]="weatherInfo.temperature">
+                    <label for="fahrenheit">°F</label>
+                </div>
+                <div class="form-group">
+                    <div class="title-txt">Wind</div>
+                    <input type="radio" id="wind-on" name="wind" [value]="true" [(ngModel)]="weatherInfo.wind">
+                    <label for="wind-on">On</label>
+                    <input type="radio" id="wind-off" name="wind" [value]="false" [(ngModel)]="weatherInfo.wind">
+                    <label for="wind-off">Off</label>
+                </div>
+                <button type="submit" [disabled]="!weatherInfo?.additionInfo" class="btn btn-primary">Add Widget</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <div class="divider">
+                <app-widget [data]="weatherInfo"></app-widget>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #cacaca;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #cacaca;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #cacaca;
+}
+
+.editor {
+    background-color: #F5F5F5;
+    border: 1px solid #c3c3c3;
+    border-radius: 0 0 5px 5px;
+    margin: 50px 0;
+    padding: 60px 15px 30px 60px;
+}
+
+label {
+    color: #6A6A6A;
+}
+
+.title-txt {
+    color: #6A6A6A;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    input[type="radio"] {
+        margin-right: 17px;
+        &:nth-child(4) {
+            margin-left: 95px;
+        }
+    }
+}
+
+.divider {
+    border-left: 1px solid #cacaca;
+    padding-left: 30px;
+}
+
+.btn-primary {
+    border-radius: 0;
+    margin: 10px 0;
+}

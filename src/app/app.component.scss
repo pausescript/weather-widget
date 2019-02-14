@@ -1,0 +1,17 @@
+.widget-list {
+    background-color: #F5F5F5;
+    height: 100vh;
+    overflow: auto;
+    ul {
+        margin-top: 25px;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+}
+
+.exception-msg {
+    color: #cacaca;
+    margin-top: 50%;
+}

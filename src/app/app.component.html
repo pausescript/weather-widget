@@ -1,0 +1,22 @@
+<div class="site-content">
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <app-widget-editor></app-widget-editor>
+                </div>
+                <div class="col-lg-4 widget-list">
+                    <div class="text-center exception-msg" *ngIf="!widgetList || (widgetList && widgetList.length === 0)">Why don't you create some widget.</div>
+                    <ul *ngIf="widgetList">
+                        <li *ngFor="let widget of widgetList; let ind = index">
+                            <app-widget [data]="widget" [canDelete]="true" [index]="ind"></app-widget>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

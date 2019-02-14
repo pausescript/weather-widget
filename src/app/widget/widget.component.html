@@ -1,0 +1,12 @@
+<div class="widget-preview">
+    <i class="fa fa-trash-o" aria-hidden="true" *ngIf="canDelete" (click)="removeWidget()"></i>
+    <h2>{{data?.title || 'TITLE OF WIDGET'}}</h2>
+    <div class="widget-info d-flex">
+        <img src="./assets/images/weather-logo.png" height="70">
+        <div class="info" *ngIf="data?.additionInfo">
+            <div class="area">{{data?.additionInfo?.name || '--'}}</div>
+            <div class="temperature">{{data?.additionInfo?.main?.temp | temperature:data?.temperature}}<span>°{{data?.temperature || 'C'}}</span></div>
+            <div class="wind" *ngIf="data?.wind"><b>Wind</b> {{data?.additionInfo?.wind?.deg | compass}} {{data?.additionInfo?.wind?.speed | number:'1.0-0'}}km/h</div>
+        </div>
+    </div>
+</div>

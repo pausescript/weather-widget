@@ -1,0 +1,52 @@
+.widget-preview {
+    background-color: #FFF;
+    box-shadow: 1px 2px 10px 1px #DADADA;
+    border-radius: 3px;
+    padding: 30px 0 0 30px;
+    position: relative;
+    height: 220px;
+    width: 285px;
+    h2 {
+        font-size: 17px;
+        font-weight: bold;
+        color: #252525;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+    }
+}
+
+img {
+    margin: 10px 22px 0 0;
+}
+
+.info {
+    .area {
+        color: #6A6A6A;
+    }
+    .temperature {
+        color: #252525;
+        font: bold 42px 'Verdana';
+        line-height: 33px;
+        margin-left: -4px;
+        span {
+            font-size: 12px;
+            vertical-align: text-top;
+        }
+    }
+}
+
+.wind {
+    font: 12px Verdana;
+    color: #6A6A6A;
+    margin-top: 10px;
+    b {
+        color: #252525;
+        margin-right: 4px;
+    }
+}
+
+.fa {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
